@@ -7,10 +7,10 @@ steps:
   - name: 'node:16.16'    #  runna il progetto
     entrypoint: 'npm'
     args: ['run', 'build']
-  - name: 'gcr.io/${_FIREBASE_PROJECT_ID}/firebase'     # autenticazione firebase 
-    args: ['use', '${_FIREBASE_PROJECT_ID}', '--token', '${_FIREBASE_TOKEN}']
-  - name: 'gcr.io/${_FIREBASE_PROJECT_ID}/firebase'     # a quale progetto vuole accedere
+  - name: 'gcr.io/angular-34bc8/firebase'     # autenticazione firebase 
+    args: ['use', 'angular-34bc8', '--token', '${_FIREBASE_TOKEN}']
+  - name: 'gcr.io/angular-34bc8/firebase'     # a quale progetto vuole accedere
     args: ['target:apply', 'hosting', 'angular-34bc8', 'angular-34bc8', '--token', '${_FIREBASE_TOKEN}']
-  - name: 'gcr.io/${_FIREBASE_PROJECT_ID}/firebase'     # deploy finale del progetto
+  - name: 'gcr.io/angular-34bc8/firebase'     # deploy finale del progetto
     args: ['deploy', '--token', '${_FIREBASE_TOKEN}', '--only', 'hosting:angular-34bc8']
 timeout: 1200s
