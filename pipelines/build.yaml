@@ -1,12 +1,5 @@
 steps:
-  - name: 'gcr.io/cloud-builders/docker'      # docker file firebase
-    args: ['build', '-t', 'gcr.io/angular-34bc8/firebase', './dockerfiles/firebase']
-  - name: 'node:16.16'  # rifa la libreria
-    entrypoint: 'npm'
-    args: ['install']
-  - name: 'node:16.16'    #  runna il progetto
-    entrypoint: 'npm'
-    args: ['run', 'build']
+
   - name: 'gcr.io/angular-34bc8/firebase'     # autenticazione firebase 
     args: ['use', 'angular-34bc8', '--token', '${_FIREBASE_TOKEN}']
   - name: 'gcr.io/angular-34bc8/firebase'     # a quale progetto vuole accedere
