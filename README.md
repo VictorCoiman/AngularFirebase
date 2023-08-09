@@ -52,3 +52,5 @@ nel codice di quel file ci sono delle variavili ${cose}, dove serve il token e i
     per il secondo, si trova della bash del progetto firebase.
 Per questi due parametnri ci sono dei spazi apositi nel cloud build in impostazioni avanzate
 Dopo fai crea per generare il triger
+
+<!-- tutto l'ambaradan non ha funzionato perche mi da un certo strano errore per adesso ho disattivato il servizio di google build>
